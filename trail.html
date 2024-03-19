@@ -1,0 +1,31 @@
+<div class="container">
+    <button class="btn" id="btn">Select Role
+      <i class="bx bx-chevron-down" id="arrow"></i>
+    </button>
+    <div class="dropdown" id="dropdown">
+      <a href="admin.html">Admin</a>
+      <a href="student.html">Student</a>
+      <a href="teacher.html">Teacher</a>
+    </div>
+  </div>
+  
+  <script>
+    // Get the button and the dropdown elements
+    var btn = document.getElementById("btn");
+    var dropdown = document.getElementById("dropdown");
+  
+    // Add a click event listener to the button
+    btn.addEventListener("click", function() {
+      // Toggle the show class to the dropdown
+      dropdown.classList.toggle("show");
+    });
+  
+    // Add a click event listener to the window
+    window.addEventListener("click", function(event) {
+      // If the clicked element is not the button, hide the dropdown
+      if (event.target !== btn) {
+        dropdown.classList.remove("show");
+      }
+    });
+  </script>
+  
